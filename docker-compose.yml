@@ -1,0 +1,16 @@
+
+volumes:
+  db:
+
+services:
+  mariadb:
+    image: mariadb
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MARIADB_USER: "root"
+      MARIADB_PASSWORD: "06112001"
+      MARIADB_ROOT_PASSWORD: "06112001"
+    volumes:
+      - db:/var/lib/mysql
